@@ -11,6 +11,18 @@
 |
 */
 
+use Azure\User;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/event', function () {
+    $user = new User();
+
+    event(new UserWasBanned($user));
+
+    return view('welcome');
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
