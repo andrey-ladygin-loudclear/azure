@@ -22,7 +22,9 @@ Route::get('/event', function () {
     return view('welcome');
 });
 
+Route::resource('/home', 'HomeController');
 
 Route::get('/', function () {
     return view('welcome');
 });
+

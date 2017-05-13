@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Azure\Providers\AppServiceProvider::class,
+        Azure\Providers\AuthServiceProvider::class,
+        // Azure\Providers\BroadcastServiceProvider::class,
+        Azure\Providers\EventServiceProvider::class,
+        Azure\Providers\RouteServiceProvider::class,
 
     ],
 

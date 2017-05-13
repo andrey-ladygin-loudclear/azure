@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Azure\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
