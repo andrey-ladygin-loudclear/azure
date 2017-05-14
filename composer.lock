@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c299fd7c6ab9fc3b1a3577ec40855d0b",
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "hash": "5a345d56a4c381d94af52db0132cafb0",
+    "content-hash": "dd11be6b72aa75eb612b79682284147b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -829,16 +829,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.3",
+            "version": "v0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/17cf432bb80d9198df239b80d00a29155bd74d82",
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
                 "shasum": ""
             },
             "require": {
@@ -898,7 +898,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-19 21:40:44"
+            "time": "2017-05-12 15:41:55"
         },
         {
             "name": "ramsey/uuid",
@@ -2013,6 +2013,102 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "laracasts/generators",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
+                "reference": "4e9ce5db9d93475ca27b993a92de3b15090aa139"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/4e9ce5db9d93475ca27b993a92de3b15090aa139",
+                "reference": "4e9ce5db9d93475ca27b993a92de3b15090aa139",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracasts\\Generators\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Extend Laravel 5's generators.",
+            "keywords": [
+                "generators",
+                "laravel"
+            ],
+            "time": "2017-01-25 15:31:26"
+        },
+        {
+            "name": "laracasts/testdummy",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/TestDummy.git",
+                "reference": "ba986a66b6f4a1e149355357353af3072d5521ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/TestDummy/zipball/ba986a66b6f4a1e149355357353af3072d5521ee",
+                "reference": "ba986a66b6f4a1e149355357353af3072d5521ee",
+                "shasum": ""
+            },
+            "require": {
+                "fzaninotto/faker": "~1.4",
+                "illuminate/support": "~4.0|~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~4.0|~5.0",
+                "phpspec/phpspec": "~2.0",
+                "phpunit/phpunit": "~4.7@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracasts\\TestDummy\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy test stubs",
+            "keywords": [
+                "factorygirl",
+                "laravel",
+                "stubs",
+                "testing"
+            ],
+            "time": "2015-04-27 15:56:12"
         },
         {
             "name": "mockery/mockery",
@@ -3339,9 +3435,18 @@
             "time": "2016-11-23 20:04:58"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.1.4",
+            "alias_normalized": "1.1.4.0",
+            "version": "9999999-dev",
+            "package": "laracasts/generators"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "laracasts/generators": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
