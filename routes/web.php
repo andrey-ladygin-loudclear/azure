@@ -11,6 +11,8 @@
 |
 */
 
+use Azure\Events\UserSignedUp;
+use Azure\Events\UserWasBanned;
 use Azure\User;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +30,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('documents/{document}', 'DocumentsController@show');
+
+
+
+Route::get('/redis', function() {
+    // 1. Publish event with Redis
+
+    $redis = new Redis();
+    $redis->publish('test-channel', json_encode(['test' => 'test12']));
+    //event(new UserSignedUp('JohnDoe'));
+
+    // 2. Node.js + Redis subscribers to the event
+    // 3. Use socket.io to emit to all clients.
+    return view('lessons-io');
+});
+
+
+Route::get('/webpack', function() {
+    return view('webpack');
+});
+
+
+
+Route::group(['prefix' => 'api/v1'], function() {
+   Route::resource('lessons', 'LessonsController');
+});
