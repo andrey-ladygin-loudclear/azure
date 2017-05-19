@@ -33,7 +33,7 @@ class Handler extends ExceptionHandler
     public function report(Exception $exception)
     {
         if ($exception instanceof Exception) {
-            die('Handler Exception');
+            //die('Handler Exception');
         }
 
         parent::report($exception);

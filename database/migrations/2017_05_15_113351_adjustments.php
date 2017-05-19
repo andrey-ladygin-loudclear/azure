@@ -13,6 +13,7 @@ class Adjustments extends Migration
      */
     public function up()
     {
+        // set the primary keys
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->index()->unsigned();
