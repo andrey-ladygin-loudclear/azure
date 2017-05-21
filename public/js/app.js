@@ -788,8 +788,48 @@ window.Vue = __webpack_require__(37);
 Vue.component('example', __webpack_require__(34));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app',
+    components: {}
 });
+
+var name1 = 'Foo';
+
+var template = '\n    <div class="alert">\n        <p>' + name + '</p>\n    </div>\n';
+
+console.log(template);
+
+function getPerson() {
+    var name = 'John';
+    var age = 25;
+
+    return {
+        name: name,
+        age: age,
+        greet: function greet() {
+            return 'Hello, ' + this.name;
+        }
+    };
+}
+
+var person = {
+    test: 12,
+    name: "karen",
+    age: 3,
+    supertest: 12
+};
+var name = person.name,
+    age = person.age;
+
+
+function getData(_ref) {
+    var name = _ref.name,
+        age = _ref.age;
+
+    console.log(name, age);
+}
+getData(person);
+
+console.log('12');
 
 /***/ }),
 /* 9 */

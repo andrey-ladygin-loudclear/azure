@@ -6,6 +6,8 @@
  */
 
 require('./bootstrap');
+require('./promises');
+require('./generators');
 
 window.Vue = require('vue');
 
@@ -18,5 +20,52 @@ window.Vue = require('vue');
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+
+    }
 });
+
+let name1 = 'Foo';
+
+let template = `
+    <div class="alert">
+        <p>${name}</p>
+    </div>
+`;
+
+console.log(template);
+
+
+function getPerson() {
+    let name = 'John';
+    let age = 25;
+
+    return {
+        name,
+        age,
+        greet() {
+            return `Hello, ${this.name}`
+        }
+    }
+}
+
+let person = {
+    test: 12,
+    name: "karen",
+    age: 3,
+    supertest: 12
+};
+let { name, age } = person;
+
+function getData({ name, age }) {
+    console.log(name, age);
+}
+getData(person);
+
+
+'string'.includes('test');
+'string'.startsWith('test');
+'string'.endsWith('test');
+'string'.repeat(2);
+//array.find(item => console.log(item))
