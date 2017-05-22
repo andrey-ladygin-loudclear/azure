@@ -25,6 +25,7 @@ Route::get('/event', function () {
 });
 
 Route::resource('/home', 'HomeController');
+Route::resource('/vue', 'VueController');
 
 Route::get('/main', function () {
     return view('main');

@@ -6,10 +6,11 @@
  */
 
 require('./bootstrap');
-require('./promises');
-require('./generators');
-
 window.Vue = require('vue');
+
+//require('./promises');
+//require('./generators');
+require('./vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -19,12 +20,12 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
-    el: '#app',
-    components: {
-
-    }
-});
+// const app = new Vue({
+//     el: '#app',
+//     components: {
+//
+//     }
+// });
 
 let name1 = 'Foo';
 
