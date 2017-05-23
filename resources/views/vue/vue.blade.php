@@ -16,10 +16,14 @@
             <textarea name="" id="" cols="30" rows="10" v-model="message"></textarea>
             <button id="submit" @click="count += 2">Click</button>
             <p>@{{ count }}</p>
+            <div class="form-group">
+                <label>Points for @{{ skill }}</label>
+                <input type="text" v-model="points">
+            </div>
         </form>
 
-        <mycounter></mycounter>
-        <mycounter></mycounter>
+        <mycounter subject="Likes"></mycounter>
+        <mycounter subject="Dislikes"></mycounter>
 
         <template id="counter-template">
             <h1>Head2</h1>
