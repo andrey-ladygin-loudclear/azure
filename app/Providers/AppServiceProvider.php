@@ -2,6 +2,7 @@
 
 namespace Azure\Providers;
 
+use Azure\GuestUser;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
             return "<?= 'Hello world' ?>";
         });
         //php artisan view:clear
+
+        view()->share('user', auth()->user() ?? new GuestUser());
     }
 
     /**

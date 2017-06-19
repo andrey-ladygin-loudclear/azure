@@ -30,4 +30,13 @@ class Lesson extends Model
             throw new \Exception();
         }
     }
+
+    public function scopeBusy()
+    {
+        return static::leftJoin('movies', 'movies.director_id', '=', 'directors.id')
+            ->select('directors.id', 'directors.name', \DB::raw('count(movies.id) as movie_count'))
+            ->groupBy('directors.id')
+            ->orderBy('movie_count', 'desc')
+            ->get();
+    }
 }

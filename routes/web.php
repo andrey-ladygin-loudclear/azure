@@ -57,6 +57,12 @@ Route::get('/webpack', function() {
 });
 
 
+Route::get('/busydirectors', function() {
+    $ea = App\Lesson::where('id', '<', 3);
+    return (new \App\Queries\BusyDirectors($ea))->get();
+});
+
+
 
 Route::group(['prefix' => 'api/v1'], function() {
    Route::resource('lessons', 'LessonsController');
